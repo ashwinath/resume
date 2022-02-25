@@ -1,0 +1,127 @@
+\documentclass[]{resume-openfont}
+
+\pagestyle{fancy}
+\resetHeaderAndFooter
+
+%--------------------------------------------------------------
+% Convenience command - make it easy to fill template
+
+% Create job position command. Parameters: company, position, location, when
+\newcommand{\resumeHeading}[4]{\runsubsection{\uppercase{#1}}\descript{ | #2}\hfill\location{#3 | #4}\fakeNewLine}
+
+% Create education heading. Parameters: Name, degree, location, when
+\newcommand{\educationHeading}[4]{\runsubsection{#1}\hspace*{\fill}  \location{#3 | #4}\\
+\descript{#2}\fakeNewLine}
+
+% Create project heading. Parameters: Name, link, Tech stack
+\newcommand{\projectHeading}[3]{\Project{#1}{#2}
+\descript{#3}\\}
+
+%--------------------------------------------------------------
+\begin{document}
+
+%--------------------------------------------------------------
+%     Profile
+%--------------------------------------------------------------
+\newcommand{\yourName}{Ashwin Chatterji}
+% How you want it to show up on the resume
+\newcommand{\yourWebsite}{ashwinchat.com}
+% vs how you want it to show up. If it's you can just replace "\yourWebsiteLink" with "yourWebsite"
+\newcommand{\yourWebsiteLink}{https://ashwinchat.com}
+\newcommand{\yourEmail}{ashwinath@hotmail.com}
+\newcommand{\githubUserName}{ashwinath}
+\newcommand{\linkedInUserName}{ashwin-chatterji}
+
+\begin{center}
+    \Huge \scshape \latoRegular{\yourName} \\ \vspace{1pt}
+    \small \href{mailto:\yourEmail}{\underline{\yourEmail}} $|$ 
+    \href{https://www.linkedin.com/in/\linkedInUserName}{\underline{linkedIn/\linkedInUserName}} $|$
+    \href{https://github.com/\githubUserName}{\underline{github/\githubUserName}} 
+     $|$ \href{\yourWebsiteLink}{\underline{\yourWebsite}}
+\end{center}
+
+%--------------------------------------------------------------
+%     Education
+%--------------------------------------------------------------
+\section{Education}
+\educationHeading{Honours of Business Administration (Marketing)}{Nanyang Technological University}{Singapore}{Aug 2013 - May 2016}
+
+\sectionsep
+
+%--------------------------------------------------------------
+%     Experience
+%--------------------------------------------------------------
+\section{Work Experience}
+% GOJEK
+\resumeHeading{Gojek}{Software Engineer, Infrastructure}{Singapore}{Mar 2020 – Present}
+\begin{bullets}
+    \item Added the batch ensembling feature in \href{https://github.com/gojek/turing}{\underline{Turing}} which \textbf{orchestrates Spark jobs} in Kubernetes clusters using the \textbf{Kubernetes Go client}.
+    \item Added functionality to allow in cluster credentials with the \textbf{Kubernetes RBAC API} to orchestrate Turing routers in clusters.
+    \item Maintain infrastructure as code using \textbf{Terraform}.
+    \item Set up and maintain the infrastructure in Data Science Platform such as \textbf{Prometheus, Knative, KServe, Istio, Kubernetes clusters} etc across multiple regions.
+    \item Optimised statistical error calculations on large forecast data using a \textbf{distributed Ray cluster} on Kubernetes.
+\end{bullets}
+\sectionsep
+
+% 99.co
+\resumeHeading{99.co}{Backend/DevOps Engineer}{Singapore}{Jan 2018 – Feb 2020}
+\begin{bullets}
+    \item Developed the backend for \href{https://www.99.co/singapore/new-launches}{\underline{searching based on \textbf{geospatial data} and other data}}.
+    \item Augmented an \textbf{autocomplete service} that automatically completes a name of a landmark, cluster et al in under \textbf{5 milliseconds}.
+    \item Designed and built an \textbf{automated scheduling system} for Autorefresh; a way to bump listings in search results
+    \item Created and maintained fully automated CI/CD pipelines using \textbf{Travis CI, Docker, Kubernetes and EBS}.
+automatically.
+    \item Implemented monitoring and alerting systems using \textbf{Prometheus and Grafana}.
+    \item Implemented Istio service mesh for \textbf{telemetry} as well as network latency analysis.
+    \item Centralised microservices logging using \textbf{Fluentd collector for Kubernetes, Elasticsearch and Kibana}.
+\end{bullets}
+\sectionsep
+
+% DXC
+\resumeHeading{DXC Technology}{Software Developer}{Singapore}{Jul 2016 – Dec 2017}
+\begin{bullets}
+    \item Developed mission critical applications for our client using Java EE.
+\end{bullets}
+\sectionsep
+
+%--------------------------------------------------------------
+%     Projects
+%--------------------------------------------------------------
+\section{Projects}
+
+% Financials
+\projectHeading{Financials}{https://github.com/ashwinath/financials}{Rust, Jsonnet, Kubernetes, Helm}
+Financials is a way to track your financial independence track in Singapore's context. It uses a Grafana frontend to display your current assets, investments, expenditure.
+\sectionsep
+
+% Turing
+\projectHeading{Turing}{https://github.com/gojek/turing}{Go, KNative, Istio, Spark, Kubernetes, Helm}
+Turing is a fast, scalable and extensible system that can be used to design, deploy and evaluate ML experiments in production. This is the main project I work on during my time in Gojek.
+\sectionsep
+
+% Dotfiles
+\projectHeading{Dot files}{https://github.com/ashwinath/dotfiles}{Bash, Vimscript}
+These are the tools I use and have refined over the years of working.
+\sectionsep
+  
+%--------------------------------------------------------------
+%     Skills
+%--------------------------------------------------------------
+\section{Skills}
+\begin{skillList}
+    \singleItem{Languages:}{Go, Python, Java, Javascript, Bash, C, Rust, SQL}
+    \\
+    \singleItem{Development Tools:}{Tmux, Neovim, i3-gaps, Linux}
+    \\
+    \singleItem{Technology:}{Kubernetes, Helm, Prometheus, Istio, Linux, Git, GCP, Docker, \LaTeX, ElasticSearch, PostgreSQL, InfluxDB}
+\end{skillList}
+
+% A more concise alternate 
+% \begin{skillList}
+%     \doubleItem{Languages:}{Java, C++, Python, C\#, PHP, Prolog, Bash, C, Racket}%
+%     {Databases:}{SQL, MongoDB, Neo4j, DynamoDB}
+%     \\
+%     \doubleItem{Web Development:}{JavaScript, TypeScript, React, HTML/CSS}
+%     {Technology:}{Git, AWS, GCP, Azure, Docker, \LaTeX}%
+% \end{skillList}
+\end{document}
