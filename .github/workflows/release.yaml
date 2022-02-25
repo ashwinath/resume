@@ -1,0 +1,30 @@
+on:
+  release:
+    types: [created]
+
+jobs:
+  build:
+    name: Build resume
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Get release
+        id: get_release
+        uses: bruceadams/get-release@v1.2.3
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Build resume
+        run: make
+
+      - name: Upload release
+        uses: actions/upload-release-asset@v1.0.2
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.get_release.outputs.upload_url }}
+          asset_path: ./ashwin.pdf
+          asset_name: ashwin.pdf
+          asset_content_type: application/pdf
