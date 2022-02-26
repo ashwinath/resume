@@ -4,7 +4,7 @@ build:
 	@docker run \
 		--rm \
 		-v $(shell pwd):/data \
-		test-image \
+		ghcr.io/ashwinath/xelatex-compiler:v0.0.1 \
 		xelatex /data/ashwin.tex
 
 clean:
