@@ -105,7 +105,7 @@
 \color{headings}%
 \raggedright%
 \customRalewayMedium%
-\fontsize{11pt}{13pt}%
+\fontsize{11pt}{12pt}%
 \selectfont{#1}%
 \normalfont}
 
