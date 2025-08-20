@@ -44,7 +44,7 @@
 %     Education
 %--------------------------------------------------------------
 \section{Education}
-\educationHeading{Honours of Business Administration (Marketing)}{Nanyang Technological University}{Singapore}{Aug 2013 - May 2016}
+\educationHeading{Bachelor of Business (Honours)}{Nanyang Technological University}{Singapore}{Aug 2013 - May 2016}
 
 \sectionsep
 
@@ -52,45 +52,48 @@
 %     Experience
 %--------------------------------------------------------------
 \section{Work Experience}
+% F5 Inc
+\resumeHeading{F5, Inc}{Senior Software Engineer}{Singapore}{Aug 2023 – Present}
+\begin{bullets}
+    \item Served as Site Reliability Engineer (SRE) at F5 Inc., Distributed Cloud, managing production on-call responsibilities for Customer Edges (CE), Regional Edges (RE), and Global Controller (GC).
+    \item Specialized in software provisioning for CEs across AWS, GCP, Azure, bare metal machines, and VMware VMs, enabling automated deployment via SaaS portal.
+    \item Orchestrated end-to-end CE provisioning, including Kubernetes installation, data plane and control plane software deployment, DDoS protection, and metric/log reporting to SaaS portal.
+    \item Contributed to security compliance by implementing STIGs/FIPS hardening for FedRAMP requirements.
+    \item Managed CE lifecycle, including Linux OS upgrades via OSTree and remote software updates triggered by customer-initiated upgrades through the SaaS portal.
+\end{bullets}
+\sectionsep
+
 % INDEED
 \resumeHeading{Indeed.com}{Software Engineer}{Singapore}{Jun 2022 – Mar 2023}
 \begin{bullets}
-    \item Implemented A/B testing for testing salary estimates for multiple regions on multiple platforms.
-    \item Broke down complex features into smaller subtasks for new university graduates to work on.
-    \item Investigated, provided insights and implemented fixes for production issues.
+    \item Designed and implemented A/B testing frameworks to evaluate salary estimates across multiple regions and platforms, enhancing data-driven decision-making.
+    \item Decomposed complex features into manageable subtasks, enabling effective onboarding and contributions from new university graduates.
 \end{bullets}
 \sectionsep
 
 % GOJEK
 \resumeHeading{Gojek}{Software Engineer, Infrastructure}{Singapore}{Mar 2020 – Jun 2022}
 \begin{bullets}
-    \item Added the batch ensembling feature in \href{https://github.com/gojek/turing}{\underline{Turing}} which orchestrates Spark jobs in Kubernetes clusters using the Kubernetes Go client.
-    \item Added functionality to allow in cluster credentials with the Kubernetes RBAC API to orchestrate Turing routers in clusters.
-    \item Set up and maintained the infrastructure in Data Science Platform such as Prometheus, Knative, KServe, Istio, Kubernetes clusters etc across multiple regions.
-    \item Optimised statistical error calculations on large forecast data using a distributed Ray cluster on Kubernetes.
+    \item Developed batch ensembling feature in \href{https://github.com/gojek/turing}{\underline{Turing}}, leveraging Kubernetes Go client to orchestrate Spark jobs within Kubernetes clusters, improving job efficiency.
+    \item Established and maintained critical infrastructure for Data Science Platform, including Prometheus, Knative, KServe, Istio, and Kubernetes clusters across multiple regions.
+    \item Optimized statistical error calculations for large-scale forecast data using a distributed Ray cluster on Kubernetes, boosting performance and accuracy.
 \end{bullets}
 \sectionsep
 
 % 99.co
 \resumeHeading{99.co}{Backend/DevOps Engineer}{Singapore}{Jan 2018 – Feb 2020}
 \begin{bullets}
-    \item Developed the backend for \href{https://www.99.co/singapore/new-launches}{\underline{searching based on geospatial data and other data}} for new launches.
-    \item Augmented an autocomplete service that automatically completes a name of a landmark, cluster et al in under 5 milliseconds.
-    \item Implemented the federated login system using Facebook and Google OAuth.
-    \item Designed and built an automated scheduling system for Autorefresh; a way to bump listings in search results.
-    \item Created and maintained fully automated CI/CD pipelines using Travis CI, Docker, Kubernetes and EBS.
-    \item Implemented monitoring and alert systems using Prometheus and Grafana.
-    \item Implemented Istio service mesh for telemetry as well as network latency analysis.
-    \item Centralised microservices logging using Fluentd collector for Kubernetes, Elasticsearch and Kibana.
+    \item Built backend systems for geospatial and property data search, supporting New Launch queries with high efficiency.
+    \item Enhanced autocomplete service to deliver landmark and cluster name completions in under 5 milliseconds, improving user experience.
+    \item Implemented federated login system with Facebook and Google OAuth, ensuring secure and seamless user authentication.
+    \item Designed automated scheduling system for Autorefresh, increasing visibility of listings in search results.
+    \item Deployed automated CI/CD pipelines using Travis CI, Docker, Kubernetes, and AWS EBS.
+    \item Deployed monitoring, alerting and logging systems with Prometheus, Istio Telemetry, Grafana, Fluentd, Elasticsearch and Kibana.
 \end{bullets}
 \sectionsep
 
 % DXC
 \resumeHeading{DXC Technology}{Software Developer}{Singapore}{Jul 2016 – Dec 2017}
-\begin{bullets}
-    \item Developed mission critical applications for our client using Java EE.
-    \item Helped to analyse and solve production issues.
-\end{bullets}
 \sectionsep
 
 %--------------------------------------------------------------
@@ -98,19 +101,9 @@
 %--------------------------------------------------------------
 \section{Projects}
 
-% Turing
-\projectHeading{Turing}{https://github.com/gojek/turing}{Go, KNative, Istio, Spark, Kubernetes, Helm}
-Turing is a fast, scalable and extensible system that can be used to design, deploy and evaluate ML experiments in production. This is the main project I work on during my time in Gojek.
-\sectionsep
-
 % Financials
-\projectHeading{Financials}{https://github.com/ashwinath/financials}{Rust, Jsonnet, Kubernetes, Helm}
-Financials is a way to track your financial independence in Singapore's context. Inpsired by "Your Money or Your Life" by Vicki Robin. It uses a Grafana frontend to display your current assets, investments and expenditure.
-\sectionsep
-
-% Path of Excile Search
-\projectHeading{Path of Exile Search}{https://github.com/ashwinath/PathOfExileSearch}{Typescript, ElasticSearch, React}
-Fuzzy search on Path of Exile items. You can either search by the property of the item or the item name itself. It also connects to the poe.ninja search API to get the live prices of that current league.
+\projectHeading{Financials}{https://github.com/ashwinath/financials}{Go, Kubernetes, Helm}
+Financials is a way to track your financial independence in Singapore's context. Inspired by ``Your Money or Your Life" by Vicki Robin. It uses a Grafana frontend to display your current assets, investments and expenditure.
 \sectionsep
  
 %--------------------------------------------------------------
@@ -118,11 +111,11 @@ Fuzzy search on Path of Exile items. You can either search by the property of th
 %--------------------------------------------------------------
 \section{Skills}
 \begin{skillList}
-    \singleItem{Languages:}{Go, Python, Java, Javascript, Typescript, Bash, C, Rust, SQL, \LaTeX}
+    \singleItem{Languages:}{Go, Python, Java, Javascript, Typescript, Bash, SQL, \LaTeX}
     \\
-    \singleItem{Development Tools:}{Tmux, Neovim, i3-gaps, Linux}
+    \singleItem{Development Tools:}{Tmux, Neovim, i3-gaps}
     \\
-    \singleItem{Technology:}{Kubernetes, Helm, Prometheus, Istio, Linux, Git, GCP, Docker, ElasticSearch, PostgreSQL, InfluxDB}
+    \singleItem{Technology:}{Kubernetes, Helm, Prometheus, Linux, Git, GCP, Docker, ElasticSearch, PostgreSQL, InfluxDB}
 \end{skillList}
 
 \end{document}
